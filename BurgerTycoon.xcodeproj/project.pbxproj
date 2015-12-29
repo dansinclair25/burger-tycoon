@@ -12,6 +12,9 @@
 		390DB79D1C332EB800A8EDCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390DB79B1C332EB800A8EDCC /* Main.storyboard */; };
 		390DB79F1C332EB800A8EDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390DB79E1C332EB800A8EDCC /* Assets.xcassets */; };
 		390DB7A21C332EB800A8EDCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390DB7A01C332EB800A8EDCC /* LaunchScreen.storyboard */; };
+		390DB7AA1C332F7000A8EDCC /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB7A91C332F7000A8EDCC /* GameData.swift */; };
+		390DB7AE1C33341800A8EDCC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB7AD1C33341800A8EDCC /* Product.swift */; };
+		CE9207F84F80DFB7F01CB299 /* Pods_BurgerTycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498BD257D9C7EB2D572B36E6 /* Pods_BurgerTycoon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		390DB79E1C332EB800A8EDCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		390DB7A11C332EB800A8EDCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		390DB7A31C332EB800A8EDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		390DB7A91C332F7000A8EDCC /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		390DB7AD1C33341800A8EDCC /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		498BD257D9C7EB2D572B36E6 /* Pods_BurgerTycoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurgerTycoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		838847DDE27A840170C84F6E /* Pods-BurgerTycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerTycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon.debug.xcconfig"; sourceTree = "<group>"; };
+		C88535B18CA6E49EF55FB0C5 /* Pods-BurgerTycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerTycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9207F84F80DFB7F01CB299 /* Pods_BurgerTycoon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				390DB7961C332EB800A8EDCC /* BurgerTycoon */,
 				390DB7951C332EB800A8EDCC /* Products */,
+				BBA04A144AFB27721EAC6CD6 /* Pods */,
+				FB98E01305E36B329523F712 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,31 @@
 			children = (
 				390DB7971C332EB800A8EDCC /* AppDelegate.swift */,
 				390DB7991C332EB800A8EDCC /* ViewController.swift */,
+				390DB7A91C332F7000A8EDCC /* GameData.swift */,
+				390DB7AD1C33341800A8EDCC /* Product.swift */,
 				390DB79B1C332EB800A8EDCC /* Main.storyboard */,
 				390DB79E1C332EB800A8EDCC /* Assets.xcassets */,
 				390DB7A01C332EB800A8EDCC /* LaunchScreen.storyboard */,
 				390DB7A31C332EB800A8EDCC /* Info.plist */,
 			);
 			path = BurgerTycoon;
+			sourceTree = "<group>";
+		};
+		BBA04A144AFB27721EAC6CD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				838847DDE27A840170C84F6E /* Pods-BurgerTycoon.debug.xcconfig */,
+				C88535B18CA6E49EF55FB0C5 /* Pods-BurgerTycoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB98E01305E36B329523F712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				498BD257D9C7EB2D572B36E6 /* Pods_BurgerTycoon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 390DB7A61C332EB800A8EDCC /* Build configuration list for PBXNativeTarget "BurgerTycoon" */;
 			buildPhases = (
+				7BEB63745656FE84F474B86E /* Check Pods Manifest.lock */,
 				390DB7901C332EB800A8EDCC /* Sources */,
 				390DB7911C332EB800A8EDCC /* Frameworks */,
 				390DB7921C332EB800A8EDCC /* Resources */,
+				C8932BC809252667C791A501 /* Embed Pods Frameworks */,
+				28131DE08B31378769B001F9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +123,7 @@
 		390DB78C1C332EB800A8EDCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BT;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Dan Sinclair";
@@ -130,12 +164,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28131DE08B31378769B001F9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BEB63745656FE84F474B86E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8932BC809252667C791A501 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		390DB7901C332EB800A8EDCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				390DB79A1C332EB800A8EDCC /* ViewController.swift in Sources */,
+				390DB7AE1C33341800A8EDCC /* Product.swift in Sources */,
+				390DB7AA1C332F7000A8EDCC /* GameData.swift in Sources */,
 				390DB7981C332EB800A8EDCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +331,7 @@
 		};
 		390DB7A71C332EB800A8EDCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838847DDE27A840170C84F6E /* Pods-BurgerTycoon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BurgerTycoon/Info.plist;
@@ -258,6 +343,7 @@
 		};
 		390DB7A81C332EB800A8EDCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C88535B18CA6E49EF55FB0C5 /* Pods-BurgerTycoon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BurgerTycoon/Info.plist;
@@ -286,6 +372,7 @@
 				390DB7A81C332EB800A8EDCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
