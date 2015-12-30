@@ -14,6 +14,7 @@
 		390DB7A21C332EB800A8EDCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390DB7A01C332EB800A8EDCC /* LaunchScreen.storyboard */; };
 		390DB7AA1C332F7000A8EDCC /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB7A91C332F7000A8EDCC /* GameData.swift */; };
 		390DB7AE1C33341800A8EDCC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB7AD1C33341800A8EDCC /* Product.swift */; };
+		39266C051C33C90700B9D02C /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39266C041C33C90700B9D02C /* Products.plist */; };
 		CE9207F84F80DFB7F01CB299 /* Pods_BurgerTycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498BD257D9C7EB2D572B36E6 /* Pods_BurgerTycoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		390DB7A31C332EB800A8EDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		390DB7A91C332F7000A8EDCC /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		390DB7AD1C33341800A8EDCC /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		39266C041C33C90700B9D02C /* Products.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
 		498BD257D9C7EB2D572B36E6 /* Pods_BurgerTycoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BurgerTycoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		838847DDE27A840170C84F6E /* Pods-BurgerTycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerTycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon.debug.xcconfig"; sourceTree = "<group>"; };
 		C88535B18CA6E49EF55FB0C5 /* Pods-BurgerTycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurgerTycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-BurgerTycoon/Pods-BurgerTycoon.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				390DB79E1C332EB800A8EDCC /* Assets.xcassets */,
 				390DB7A01C332EB800A8EDCC /* LaunchScreen.storyboard */,
 				390DB7A31C332EB800A8EDCC /* Info.plist */,
+				39266C041C33C90700B9D02C /* Products.plist */,
 			);
 			path = BurgerTycoon;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39266C051C33C90700B9D02C /* Products.plist in Resources */,
 				390DB7A21C332EB800A8EDCC /* LaunchScreen.storyboard in Resources */,
 				390DB79F1C332EB800A8EDCC /* Assets.xcassets in Resources */,
 				390DB79D1C332EB800A8EDCC /* Main.storyboard in Resources */,

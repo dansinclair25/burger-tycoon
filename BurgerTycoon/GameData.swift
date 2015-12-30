@@ -10,29 +10,76 @@ import Foundation
 import KeychainAccess
 
 let GAMEDATA_KEYCHAIN_MONEY_KEY = "money"
+let GAMEDATA_KEYCHAIN_BURGER_STOCK_KEY = "burger_stock"
+let GAMEDATA_KEYCHAIN_FRIES_STOCK_KEY = "fries_stock"
+let GAMEDATA_KEYCHAIN_DRINK_STOCK_KEY = "drink_stock"
+let GAMEDATA_KEYCHAIN_SUNDAE_STOCK_KEY = "sundae_stock"
 
 let keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
 
-public class GameData {
+class GameData {
     
-    let defaultProducts = [
-        // Burgers
-        Product(name: "Burger", purchaseCost: 1, salePrice: 2, stock: 0),
-        Product(name: "Burger", purchaseCost: 2, salePrice: 3, stock: 0),
-        Product(name: "Burger", purchaseCost: 4, salePrice: 6, stock: 0),
-        
-        // Fries
-        Product(name: "Fries", purchaseCost: 1, salePrice: 2, stock: 0),
-        Product(name: "Fries", purchaseCost: 2, salePrice: 3, stock: 0),
-        Product(name: "Fries", purchaseCost: 4, salePrice: 5, stock: 0),
-        
-        // Drink
-        Product(name: "Drink", purchaseCost: 1, salePrice: 2, stock: 0),
-        Product(name: "Drink", purchaseCost: 2, salePrice: 3, stock: 0),
-        Product(name: "Drink", purchaseCost: 4, salePrice: 5, stock: 0),
-    ]
+    var defaultProducts: [NSObject: AnyObject] {
+        get {
+            let dict = NSBundle.mainBundle().pathForResource("Products", ofType: "plist")
+            return NSDictionary(contentsOfFile: dict!) as! [NSObject: AnyObject]
+        }
+    }
     
-    public var money: Int
+    var defaultBurgers: [AnyObject] {
+        get {
+            return defaultProducts["Burger"] as! [AnyObject]
+        }
+    }
+    
+    var defaultFries: [AnyObject] {
+        get {
+            return defaultProducts["Fries"] as! [AnyObject]
+        }
+    }
+    
+    var defaultDrinks: [AnyObject] {
+        get {
+            return defaultProducts["Drinks"] as! [AnyObject]
+        }
+    }
+    
+    var defaultSundaes: [AnyObject] {
+        get {
+            return defaultProducts["Sundae"] as! [AnyObject]
+        }
+    }
+    
+    var money: Int {
+        didSet {
+            keychain[GAMEDATA_KEYCHAIN_MONEY_KEY] = String(self.money)
+        }
+    }
+    
+    var burgerStock: Int {
+        didSet {
+            keychain[GAMEDATA_KEYCHAIN_BURGER_STOCK_KEY] = String(self.burgerStock)
+        }
+    }
+    
+    var friesStock: Int {
+        didSet {
+            keychain[GAMEDATA_KEYCHAIN_FRIES_STOCK_KEY] = String(self.friesStock)
+        }
+    }
+    
+    var drinkStock: Int {
+        didSet {
+            keychain[GAMEDATA_KEYCHAIN_DRINK_STOCK_KEY] = String(self.drinkStock)
+        }
+    }
+    
+    var sundaeStock: Int {
+        didSet {
+            keychain[GAMEDATA_KEYCHAIN_SUNDAE_STOCK_KEY] = String(self.sundaeStock)
+        }
+    }
+    
     
     var sharedData: GameData {
         get {
@@ -42,5 +89,9 @@ public class GameData {
     
     private init() {
         self.money = keychain[GAMEDATA_KEYCHAIN_MONEY_KEY] != nil ? Int(keychain[GAMEDATA_KEYCHAIN_MONEY_KEY]!)! : 0
+        self.burgerStock = keychain[GAMEDATA_KEYCHAIN_BURGER_STOCK_KEY] != nil ? Int(keychain[GAMEDATA_KEYCHAIN_BURGER_STOCK_KEY]!)! : 0
+        self.friesStock = keychain[GAMEDATA_KEYCHAIN_FRIES_STOCK_KEY] != nil ? Int(keychain[GAMEDATA_KEYCHAIN_FRIES_STOCK_KEY]!)! : 0
+        self.drinkStock = keychain[GAMEDATA_KEYCHAIN_DRINK_STOCK_KEY] != nil ? Int(keychain[GAMEDATA_KEYCHAIN_DRINK_STOCK_KEY]!)! : 0
+        self.sundaeStock = keychain[GAMEDATA_KEYCHAIN_SUNDAE_STOCK_KEY] != nil ? Int(keychain[GAMEDATA_KEYCHAIN_SUNDAE_STOCK_KEY]!)! : 0
     }
 }
